@@ -1,0 +1,150 @@
+using System;
+
+namespace domaci_ukol
+{
+    class Ovce
+    {
+        public string jmeno1;
+        public int vaha1;
+        public int id1;
+        public string typ_chovu1;
+
+        public Ovce(string Jmeno1, int Vaha1, int Id1, string Typ_chovu1)
+        {
+            jmeno1 = Jmeno1;
+            vaha1 = Vaha1;
+            id1 = Id1;
+            typ_chovu1 = Typ_chovu1;
+        }
+
+        public void ZvukOvce()
+        {
+            Console.WriteLine("Ovce " + jmeno1 + ": Be");
+            Console.WriteLine("");
+        }
+
+        public void VypisOvce()
+        {
+            Console.WriteLine("Vypis ovce");
+            Console.WriteLine("Jmeno: " + jmeno1);
+            Console.WriteLine("Vaha: " + vaha1);
+            Console.WriteLine("Id: " + id1);
+            Console.WriteLine("Typ chovu: " + typ_chovu1);
+            Console.WriteLine("");
+        }
+        public void PrejmenovaniOvce()
+        {
+            Console.WriteLine("Jmeno pred: " + jmeno1);
+            Console.WriteLine("Zadej nove jmeno...");
+            jmeno1 = Console.ReadLine();
+            Console.WriteLine("Jmeno po: " + jmeno1);
+            Console.WriteLine("");
+        }
+
+        class Krava
+        {
+            public string jmeno2;
+            public int vaha2;
+            public int id2;
+            public string typ_chovu2;
+
+            public Krava(string Jmeno2, int Vaha2, int Id2, string Typ_chovu2)
+            {
+                jmeno2 = Jmeno2;
+                vaha2 = Vaha2;
+                id2 = Id2;
+                typ_chovu2 = Typ_chovu2;
+            }
+
+            public void ZvukKravy()
+            {
+                Console.WriteLine("Krava " + jmeno2 + ": Bu");
+                Console.WriteLine("");
+            }
+
+            public void VypisKravy()
+            {
+                Console.WriteLine("Vypis kravy");
+                Console.WriteLine("Jmeno: " + jmeno2);
+                Console.WriteLine("Vaha: " + vaha2);
+                Console.WriteLine("Id: " + id2);
+                Console.WriteLine("Typ chovu: " + typ_chovu2);
+                Console.WriteLine("");
+            }
+            public void PrejmenovaniKravy()
+            {
+                Console.WriteLine("Jmeno pred: " + jmeno2);
+                Console.WriteLine("Zadej nove jmeno...");
+                jmeno2 = Console.ReadLine();
+                Console.WriteLine("Jmeno po: " + jmeno2);
+                Console.WriteLine("");
+            }
+
+            class Prase
+            {
+                public string jmeno3;
+                public int vaha3;
+                public int id3;
+                public string typ_chovu3;
+
+                public Prase(string Jmeno3, int Vaha3, int Id3, string Typ_chovu3)
+                {
+                    jmeno3 = Jmeno3;
+                    vaha3 = Vaha3;
+                    id3 = Id3;
+                    typ_chovu3 = Typ_chovu3;
+                }
+
+                public void ZvukPrasete()
+                {
+                    Console.WriteLine("Prase " + jmeno3 + ": Chro");
+                    Console.WriteLine("");
+                }
+
+                public void VypisPrasete()
+                {
+                    Console.WriteLine("Vypis prasete");
+                    Console.WriteLine("Jmeno: " + jmeno3);
+                    Console.WriteLine("Vaha: " + vaha3);
+                    Console.WriteLine("Id: " + id3);
+                    Console.WriteLine("Typ chovu: " + typ_chovu3);
+                    Console.WriteLine("");
+                }
+                public void PrejmenovaniPrasete()
+                {
+                    Console.WriteLine("Jmeno pred: " + jmeno3);
+                    Console.WriteLine("Zadej nove jmeno...");
+                    jmeno3 = Console.ReadLine();
+                    Console.WriteLine("Jmeno po: " + jmeno3);
+                    Console.WriteLine("");
+                }
+
+
+                static void Main(string[] args)
+                {
+                    Ovce Ovce1 = new Ovce("Bozena", 80, 1, "Maso, vlna");
+                    Ovce Ovce2 = new Ovce("Jitka", 85, 2, "Mleko, vlna");
+                    Ovce Ovce3 = new Ovce("Renata", 90, 3, "Maso, mleko, vlna");
+
+                    Krava Krava1 = new Krava("Milka", 800, 4, "Maso, mleko");
+                    Krava Krava2 = new Krava("Lenka", 850, 5, "Maso, mleko");
+                    Krava Krava3 = new Krava("Pavlina", 900, 6, "Maso, mleko");
+
+                    Prase Prase1 = new Prase("Tonda", 100, 7, "Maso");
+                    Prase Prase2 = new Prase("Rene", 200, 8, "Maso");
+                    Prase Prase3 = new Prase("Karel", 300, 9, "Maso");
+
+                    Krava2.ZvukKravy();
+                    Prase3.ZvukPrasete();
+                    Ovce1.ZvukOvce();
+                    Krava2.VypisKravy();
+                    Prase3.VypisPrasete();
+                    Ovce1.VypisOvce();
+                    Krava2.PrejmenovaniKravy();
+                    Prase3.PrejmenovaniPrasete();
+                    Ovce1.PrejmenovaniOvce();
+                }
+            }
+        }
+    }
+}
